@@ -10,7 +10,6 @@ $snippet = $modx->getOption('snippet', $scriptProperties, 'FormIt', true);
 $tpl = $modx->getOption('form', $scriptProperties, 'tpl.AjaxForm.example', true);
 $formSelector = $modx->getOption('formSelector', $scriptProperties, 'ajax_form', true);
 $objectName = $modx->getOption('objectName', $scriptProperties, 'AjaxForm', true);
-$AjaxForm->loadJsCss($objectName);
 
 /** @var pdoTools $pdo */
 if (class_exists('pdoTools') && $pdo = $modx->getService('pdoTools')) {

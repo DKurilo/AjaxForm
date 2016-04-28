@@ -10,6 +10,7 @@ require_once 'build.config.php';
 
 /* define sources */
 $root = dirname(dirname(__FILE__)) . '/';
+
 $sources = array(
     'root' => $root,
     'build' => $root . '_build/',

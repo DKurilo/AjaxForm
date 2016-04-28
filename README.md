@@ -1,3 +1,8 @@
+## Attention!
+
+This is not original AjaxForm.
+I changed it.
+
 ## AjaxForm
 
 Simple component for MODX Revolution, that allows you to send any form through ajax.

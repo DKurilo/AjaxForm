@@ -2,6 +2,8 @@
 AjaxForm
 --------------------
 Author: Vasiliy Naumkin <bezumkin@yandex.ru>
+
+Changed by Dmitry Kurilo <dima@kurilo.su>
 --------------------
 
 Simple component for MODX Revolution, that allows you to send any form through ajax.

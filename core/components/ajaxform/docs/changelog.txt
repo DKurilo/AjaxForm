@@ -1,5 +1,10 @@
 Changelog for AjaxForm.
 
+1.1.5-pl-non-standard
+==============
+Attention!
+This is not original AjaxForm!
+
 1.1.5-pl
 ==============
 - [#30] Improved support of ReCaptcha.

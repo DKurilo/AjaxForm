@@ -3,21 +3,9 @@
 $properties = array();
 
 $tmp = array(
-    'form' => array(
-        'type' => 'textfield',
-        'value' => 'tpl.AjaxForm.example',
-    ),
     'snippet' => array(
         'type' => 'textfield',
         'value' => 'FormIt',
-    ),
-    'frontend_css' => array(
-        'type' => 'textfield',
-        'value' => '[[+assetsUrl]]css/default.css',
-    ),
-    'frontend_js' => array(
-        'type' => 'textfield',
-        'value' => '[[+assetsUrl]]js/default.js',
     ),
     'actionUrl' => array(
         'type' => 'textfield',

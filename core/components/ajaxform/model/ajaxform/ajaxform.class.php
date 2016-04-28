@@ -36,8 +36,6 @@ class AjaxForm
             'corePath' => $corePath,
             'assetsPath' => $assetsPath,
 
-            'frontend_css' => '[[+assetsUrl]]css/default.css',
-            'frontend_js' => '[[+assetsUrl]]js/default.js',
         ), $config);
     }
 
@@ -51,44 +49,10 @@ class AjaxForm
      */
     public function initialize()
     {
-        $this->loadJsCss();
 
         return true;
     }
 
-
-    /**
-     * Independent registration of css and js
-     *
-     * @param string $objectName Name of object to initialize in javascript
-     */
-    public function loadJsCss($objectName = 'AjaxForm')
-    {
-        if ($css = trim($this->config['frontend_css'])) {
-            if (preg_match('/\.css/i', $css)) {
-                $this->modx->regClientCSS(str_replace('[[+assetsUrl]]', $this->config['assetsUrl'], $css));
-            }
-        }
-        if ($js = trim($this->config['frontend_js'])) {
-            if (preg_match('/\.js/i', $js)) {
-                $this->modx->regClientScript(str_replace('[[+assetsUrl]]', $this->config['assetsUrl'], $js));
-            }
-        }
-
-        $config = $this->modx->toJSON(array(
-            'assetsUrl' => $this->config['assetsUrl'],
-            'actionUrl' => str_replace('[[+assetsUrl]]', $this->config['assetsUrl'], $this->config['actionUrl']),
-            'closeMessage' => $this->config['closeMessage'],
-            'formSelector' => "form.{$this->config['formSelector']}",
-            'pageId' => !empty($this->modx->resource)
-                ? $this->modx->resource->get('id')
-                : 0,
-        ));
-        $objectName = trim($objectName);
-        $this->modx->regClientScript(
-            "<script type=\"text/javascript\">{$objectName}.initialize({$config});</script>", true
-        );
-    }
 
 
     /**
